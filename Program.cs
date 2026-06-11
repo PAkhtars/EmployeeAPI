@@ -46,11 +46,10 @@ builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IPollRepository, PollRepository>();
 builder.Services.AddScoped<PollService>();
+builder.Services.AddScoped<IVoteRepository, VoteRepository>();
+builder.Services.AddScoped<VoteService>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
-{
     app.MapOpenApi();                    // Required for .NET 9+
 
     app.UseSwaggerUI(options =>
@@ -58,7 +57,7 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/openapi/v1.json", "Employee API V1");
         options.RoutePrefix = string.Empty;   // Makes Swagger UI appear at root[](https://localhost:xxxx/)
     });
-}
+
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
