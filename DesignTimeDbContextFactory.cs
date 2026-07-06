@@ -5,7 +5,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace EmployeeAPI
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+    // Legacy design-time factory kept for reference only.
+    // Entity Framework should use Infrastructure.AppDbContextFactory for design-time DbContext creation.
+    public class LegacyDesignTimeDbContextFactory
     {
         public AppDbContext CreateDbContext(string[] args)
         {
