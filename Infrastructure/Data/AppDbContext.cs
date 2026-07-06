@@ -11,7 +11,10 @@ namespace EmployeeAPI.Infrastructure.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Poll> Polls { get; set; }
+        public DbSet<Vote> Votes { get; set; }
         public DbSet<PollOption> PollOptions { get; set; }
+        public DbSet<ActMaster> ActMasters { get; set; }
+        public DbSet<ActDetails> ActDetails { get; set; }
         //public DbSet<Vote> Votes { get; set; }           // Add later
         //public DbSet<PollComment> PollComments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -48,6 +51,12 @@ namespace EmployeeAPI.Infrastructure.Data
                       .OnDelete(DeleteBehavior.Cascade);
 
                 entity.Property(o => o.DisplayOrder).IsRequired();
+            });
+
+            modelBuilder.Entity<Vote>(entity =>
+            {
+                entity.HasKey(v => v.VoteId);
+                entity.HasIndex(v => new { v.UserId, v.PollId }).IsUnique(); // Prevent duplicate votes
             });
         }
     }
