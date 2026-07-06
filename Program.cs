@@ -21,6 +21,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IActMasterRepository, ActMasterRepository>();
+builder.Services.AddScoped<IActDetailsRepository, ActDetailsRepository>();
 // Add JWT Authentication
 builder.Services.AddAuthentication(options =>
 {

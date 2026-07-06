@@ -13,6 +13,8 @@ namespace EmployeeAPI.Infrastructure.Data
         public DbSet<Poll> Polls { get; set; }
         public DbSet<Vote> Votes { get; set; }
         public DbSet<PollOption> PollOptions { get; set; }
+        public DbSet<ActMaster> ActMasters { get; set; }
+        public DbSet<ActDetails> ActDetails { get; set; }
         //public DbSet<Vote> Votes { get; set; }           // Add later
         //public DbSet<PollComment> PollComments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
