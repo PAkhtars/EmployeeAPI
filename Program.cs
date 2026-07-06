@@ -2,6 +2,7 @@ using EmployeeAPI.Application.Services;
 using EmployeeAPI.Infrastructure.Data;
 using EmployeeAPI.Infrastructure.Repositories;
 using EmployeeAPI.Interfaces;
+using EmployeeAPI.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -16,8 +17,20 @@ builder.Services.AddEndpointsApiExplorer();
 // ✅ New .NET 9+ OpenAPI + SwaggerUI Setup
 builder.Services.AddOpenApi();
 
+// Choose connection string based on environment or USE_TEST_DB environment variable.
+var useTestDb = builder.Environment.EnvironmentName.Equals("Testing", StringComparison.OrdinalIgnoreCase)
+            || Environment.GetEnvironmentVariable("USE_TEST_DB") == "true";
+ if (useTestDb)
+{
+    var testDbPath = Path.Combine(builder.Environment.ContentRootPath, "EmployeeTest.db");
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlite($"Data Source={testDbPath}"));
+}
+else
+{           
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
 
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -52,6 +65,10 @@ builder.Services.AddScoped<IVoteRepository, VoteRepository>();
 builder.Services.AddScoped<VoteService>();
 var app = builder.Build();
 
+<<<<<<< HEAD
+=======
+// Configure the HTTP request pipeline
+>>>>>>> b7696f2047a53762ef995f9b4104a01f2be306fe
     app.MapOpenApi();                    // Required for .NET 9+
 
     app.UseSwaggerUI(options =>
@@ -62,8 +79,11 @@ var app = builder.Build();
 
 
 app.UseHttpsRedirection();
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }

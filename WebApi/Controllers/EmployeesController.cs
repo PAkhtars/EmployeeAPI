@@ -65,7 +65,7 @@ namespace EmployeeAPI.WebApi.Controllers
                 return NotFound();
 
             await _repository.DeleteAsync(id);
-            return NoContent();
+            return Ok();
         }
     }
 }

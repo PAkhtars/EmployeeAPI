@@ -9,7 +9,7 @@ namespace EmployeeAPI.Application.Services
     // Application/Services/UserService.cs
     // Application/Services/UserService.cs
     using BCrypt.Net;
-
+    using EmployeeAPI.Core.Models;
 
     public class UserService
     {
@@ -26,10 +26,10 @@ namespace EmployeeAPI.Application.Services
         public async Task<UserDto> RegisterAsync(UserRegisterDto dto)
         {
             if (await _userRepository.ExistsByEmailAsync(dto.Email))
-                throw new InvalidOperationException("Email already exists");
+                throw new ConflictException("Email already exists");
 
             if (await _userRepository.ExistsByUsernameAsync(dto.Username))
-                throw new InvalidOperationException("Username already taken");
+                throw new ConflictException("Username already taken");
 
             var user = new User
             {
@@ -43,6 +43,7 @@ namespace EmployeeAPI.Application.Services
 
             await _userRepository.AddAsync(user);
             return MapToDto(user);
+        
         }
 
         // ==================== LOGIN ====================

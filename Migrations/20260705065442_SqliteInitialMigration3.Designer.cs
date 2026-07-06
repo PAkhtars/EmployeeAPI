@@ -3,6 +3,7 @@ using System;
 using EmployeeAPI.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,104 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260705065442_SqliteInitialMigration3")]
+    partial class SqliteInitialMigration3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.9");
-
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.ActDetails", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("ActName")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BailableOrNon_Bailable")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
-                    b.Property<string>("CognizableOrNon_Cognizable")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("CreatedBy")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifeidBy")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Offence")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("Punishment")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("Section")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("TrialCourt")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ActDetails");
-                });
-
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.ActMaster", b =>
-                {
-                    b.Property<int>("ActId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ActId"));
-
-                    b.Property<string>("ActDetails")
-                        .HasColumnType("text");
-
-                    b.Property<string>("ActName")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("CreatedBy")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateOfEffect")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("ActId");
-
-                    b.ToTable("ActMasters");
-                });
 
             modelBuilder.Entity("EmployeeAPI.Core.Entities.Poll", b =>
                 {
@@ -250,36 +161,6 @@ namespace EmployeeAPI.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.Vote", b =>
-                {
-                    b.Property<Guid>("VoteId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("OptionId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("PollId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("VotedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("VoteId");
-
-                    b.HasIndex("OptionId");
-
-                    b.HasIndex("PollId");
-
-                    b.HasIndex("UserId", "PollId")
-                        .IsUnique();
-
-                    b.ToTable("Votes");
-                });
-
             modelBuilder.Entity("EmployeeAPI.Core.Models.Employee", b =>
                 {
                     b.Property<int>("EmployeeId")
@@ -376,33 +257,6 @@ namespace EmployeeAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Poll");
-                });
-
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.Vote", b =>
-                {
-                    b.HasOne("EmployeeAPI.Core.Entities.PollOption", "Option")
-                        .WithMany()
-                        .HasForeignKey("OptionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EmployeeAPI.Core.Entities.Poll", "Poll")
-                        .WithMany()
-                        .HasForeignKey("PollId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EmployeeAPI.Core.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Option");
-
-                    b.Navigation("Poll");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("EmployeeAPI.Core.Entities.Poll", b =>

@@ -15,19 +15,19 @@ namespace EmployeeAPI.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProfileImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Bio = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IsVerified = table.Column<bool>(type: "bit", nullable: false),
-                    Token = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ExpiresAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastActiveAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    UserId = table.Column<Guid>(nullable: false),
+                    Username = table.Column<string>(maxLength: 50, nullable: false),
+                    Email = table.Column<string>(maxLength: 100, nullable: false),
+                    PasswordHash = table.Column<string>(nullable: true),
+                    FullName = table.Column<string>(nullable: true),
+                    ProfileImageUrl = table.Column<string>(nullable: true),
+                    Bio = table.Column<string>(nullable: true),
+                    IsVerified = table.Column<bool>(nullable: false),
+                    Token = table.Column<string>(nullable: false),
+                    ExpiresAt = table.Column<DateTime>(nullable: false),
+                    DateOfBirth = table.Column<DateTime>(nullable: true),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    LastActiveAt = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,20 +38,20 @@ namespace EmployeeAPI.Migrations
                 name: "Polls",
                 columns: table => new
                 {
-                    PollId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CreatorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Question = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExpiresAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    IsPublic = table.Column<bool>(type: "bit", nullable: false),
-                    AllowMultipleVotes = table.Column<bool>(type: "bit", nullable: false),
-                    MinAgeRestriction = table.Column<int>(type: "int", nullable: false),
-                    TotalVotes = table.Column<long>(type: "bigint", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    PollId = table.Column<Guid>(nullable: false),
+                    CreatorId = table.Column<Guid>(nullable: false),
+                    Question = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    Category = table.Column<string>(nullable: true),
+                    ImageUrl = table.Column<string>(nullable: true),
+                    ExpiresAt = table.Column<DateTime>(nullable: true),
+                    IsPublic = table.Column<bool>(nullable: false),
+                    AllowMultipleVotes = table.Column<bool>(nullable: false),
+                    MinAgeRestriction = table.Column<int>(nullable: false),
+                    TotalVotes = table.Column<long>(nullable: false),
+                    Status = table.Column<string>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedAt = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,12 +68,12 @@ namespace EmployeeAPI.Migrations
                 name: "PollOptions",
                 columns: table => new
                 {
-                    OptionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PollId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    OptionText = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    VoteCount = table.Column<long>(type: "bigint", nullable: false),
-                    DisplayOrder = table.Column<int>(type: "int", nullable: false)
+                    OptionId = table.Column<Guid>(nullable: false),
+                    PollId = table.Column<Guid>(nullable: false),
+                    OptionText = table.Column<string>(nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true),
+                    VoteCount = table.Column<long>(nullable: false),
+                    DisplayOrder = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

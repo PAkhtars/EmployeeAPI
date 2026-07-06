@@ -2,6 +2,7 @@
 {
     using EmployeeAPI.Application.Services;    
     using EmployeeAPI.Core.DTOs;
+    using EmployeeAPI.Core.Models;
     using Microsoft.AspNetCore.Authorization;
     // WebAPI/Controllers/UsersController.cs
     using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,15 @@
                 var result = await _userService.RegisterAsync(dto);
                 return CreatedAtAction(nameof(GetUserById), new { id = result.UserId }, result);
             }
+            catch (ConflictException ex)
+            {
+                return Conflict(new { message = ex.Message });
+            }
             catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
+            
         }
 
         // POST: api/users/login
