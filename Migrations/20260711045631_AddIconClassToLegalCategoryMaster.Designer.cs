@@ -3,6 +3,7 @@ using System;
 using EmployeeAPI.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260711045631_AddIconClassToLegalCategoryMaster")]
+    partial class AddIconClassToLegalCategoryMaster
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.9");
@@ -93,9 +96,6 @@ namespace EmployeeAPI.Migrations
                     b.Property<DateTime?>("DateOfEffect")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("LegalCategoryId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("ModifiedBy")
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
@@ -104,8 +104,6 @@ namespace EmployeeAPI.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("ActId");
-
-                    b.HasIndex("LegalCategoryId");
 
                     b.ToTable("ActMasters");
                 });
@@ -392,15 +390,6 @@ namespace EmployeeAPI.Migrations
                     b.HasKey("EmployeeId");
 
                     b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.ActMaster", b =>
-                {
-                    b.HasOne("EmployeeAPI.Core.Entities.LegalCategoryMaster", "LegalCategoryMaster")
-                        .WithMany()
-                        .HasForeignKey("LegalCategoryId");
-
-                    b.Navigation("LegalCategoryMaster");
                 });
 
             modelBuilder.Entity("EmployeeAPI.Core.Entities.Poll", b =>

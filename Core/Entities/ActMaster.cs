@@ -16,6 +16,11 @@ namespace EmployeeAPI.Core.Entities
         [Column(TypeName = "text")]
         public string? ActDetails { get; set; }
 
+        [ForeignKey("LegalCategoryMaster")]
+        public int? LegalCategoryId { get; set; }
+
+        public LegalCategoryMaster? LegalCategoryMaster { get; set; }
+
         public DateTime? CreatedOn { get; set; }
 
         [StringLength(50)]

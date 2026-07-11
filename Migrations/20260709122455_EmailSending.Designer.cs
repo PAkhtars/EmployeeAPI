@@ -3,6 +3,7 @@ using System;
 using EmployeeAPI.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260709122455_EmailSending")]
+    partial class EmailSending
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.9");
@@ -93,9 +96,6 @@ namespace EmployeeAPI.Migrations
                     b.Property<DateTime?>("DateOfEffect")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("LegalCategoryId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("ModifiedBy")
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
@@ -105,46 +105,7 @@ namespace EmployeeAPI.Migrations
 
                     b.HasKey("ActId");
 
-                    b.HasIndex("LegalCategoryId");
-
                     b.ToTable("ActMasters");
-                });
-
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.LegalCategoryMaster", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Alias")
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CategoryIconPath")
-                        .HasMaxLength(500)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IconClass")
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("UpdatedOn")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LegalCategoryMasters");
                 });
 
             modelBuilder.Entity("EmployeeAPI.Core.Entities.Poll", b =>
@@ -392,15 +353,6 @@ namespace EmployeeAPI.Migrations
                     b.HasKey("EmployeeId");
 
                     b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("EmployeeAPI.Core.Entities.ActMaster", b =>
-                {
-                    b.HasOne("EmployeeAPI.Core.Entities.LegalCategoryMaster", "LegalCategoryMaster")
-                        .WithMany()
-                        .HasForeignKey("LegalCategoryId");
-
-                    b.Navigation("LegalCategoryMaster");
                 });
 
             modelBuilder.Entity("EmployeeAPI.Core.Entities.Poll", b =>

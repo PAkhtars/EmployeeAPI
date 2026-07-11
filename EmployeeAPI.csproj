@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EmployeeAPIUnitTest\bin\Debug\net10.0\" />
+    <Folder Include="MyDevOpsTestUnit\bin\Debug\net10.0\" />
   </ItemGroup>
 
 </Project>
