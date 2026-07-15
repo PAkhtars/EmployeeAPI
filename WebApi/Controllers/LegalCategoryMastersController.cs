@@ -21,6 +21,7 @@ namespace EmployeeAPI.WebApi.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<LegalCategoryMaster>>> GetAll()
         {
             var categories = await _repository.GetAllAsync();

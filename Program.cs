@@ -1,4 +1,5 @@
 using EmployeeAPI.Application.Services;
+using EmployeeAPI.Hubs;
 using EmployeeAPI.Infrastructure.Data;
 using EmployeeAPI.Infrastructure.Repositories;
 using EmployeeAPI.Interfaces;
@@ -13,10 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSignalR();
 
 var allowedOrigins = builder.Configuration
     .GetSection("Cors:AllowedOrigins")
-    .Get<string[]>();
+    .Get<string[]>() ?? new[] { "http://localhost:4200", "https://localhost:4200" };
 
 builder.Services.AddCors(options =>
 {
@@ -24,7 +26,8 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(allowedOrigins)
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
@@ -110,6 +113,7 @@ var app = builder.Build();
     app.UseAuthentication();
     app.UseAuthorization();
     app.MapControllers();
+    app.MapHub<LiveStreamHub>("/liveStreamHub");
 
     app.Run();
 
