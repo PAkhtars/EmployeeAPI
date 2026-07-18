@@ -15,8 +15,17 @@ namespace EmployeeAPI.Infrastructure.Data
         public DbSet<PollOption> PollOptions { get; set; }
         public DbSet<ActMaster> ActMasters { get; set; }
         public DbSet<ActDetails> ActDetails { get; set; }
+        public DbSet<LegalCategoryMaster> LegalCategoryMasters { get; set; }
         //public DbSet<Vote> Votes { get; set; }           // Add later
         //public DbSet<PollComment> PollComments { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.ConfigureWarnings(w => 
+                w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning));
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>()
@@ -57,6 +66,17 @@ namespace EmployeeAPI.Infrastructure.Data
             {
                 entity.HasKey(v => v.VoteId);
                 entity.HasIndex(v => new { v.UserId, v.PollId }).IsUnique(); // Prevent duplicate votes
+            });
+
+            // === ActMaster Configuration ===
+            modelBuilder.Entity<ActMaster>(entity =>
+            {
+                entity.HasKey(a => a.ActId);
+
+                // entity.HasOne(a => a.LegalCategoryMaster)
+                //       .WithMany()
+                //       .HasForeignKey(a => a.LegalCategoryId)
+                //       .OnDelete(DeleteBehavior.SetNull);
             });
         }
     }

@@ -1,3 +1,4 @@
+using EmployeeAPI.Core.DTOs;
 using EmployeeAPI.Core.Entities;
 using EmployeeAPI.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -18,6 +19,7 @@ namespace EmployeeAPI.WebApi.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<ActMaster>>> GetActMasters()
         {
             var actMasters = await _repository.GetAllAsync();
@@ -35,8 +37,24 @@ namespace EmployeeAPI.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ActMaster>> PostActMaster(ActMaster actMaster)
+        public async Task<ActionResult<ActMaster>> PostActMaster([FromBody] MasterActCreateDto request)
         {
+            if (string.IsNullOrWhiteSpace(request.ActName))
+            {
+                return BadRequest("ActName is required.");
+            }
+
+            var actMaster = new ActMaster
+            {
+                ActName = request.ActName.Trim(),
+                Alias = request.Alias?.Trim(),
+                DateOfEffect = request.DateOfEffect,
+                ActDetails = request.ActDetails,
+                LegalCategoryId = request.LegalCategoryId,
+                CreatedOn = DateTime.UtcNow,
+                CreatedBy = "API"
+            };
+
             var createdActMaster = await _repository.AddAsync(actMaster);
             return CreatedAtAction(nameof(GetActMaster), new { id = createdActMaster.ActId }, createdActMaster);
         }

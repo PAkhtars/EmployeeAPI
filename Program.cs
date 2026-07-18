@@ -1,4 +1,5 @@
 using EmployeeAPI.Application.Services;
+using EmployeeAPI.Hubs;
 using EmployeeAPI.Infrastructure.Data;
 using EmployeeAPI.Infrastructure.Repositories;
 using EmployeeAPI.Interfaces;
@@ -13,6 +14,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSignalR();
+
+var allowedOrigins = builder.Configuration
+    .GetSection("Cors:AllowedOrigins")
+    .Get<string[]>() ?? new[] { "http://localhost:4200", "https://localhost:4200" };
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.WithOrigins(allowedOrigins)
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
 
 // ✅ New .NET 9+ OpenAPI + SwaggerUI Setup
 builder.Services.AddOpenApi();
@@ -36,6 +53,7 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IActMasterRepository, ActMasterRepository>();
 builder.Services.AddScoped<IActDetailsRepository, ActDetailsRepository>();
+builder.Services.AddScoped<ILegalCategoryMasterRepository, LegalCategoryMasterRepository>();
 // Add JWT Authentication
 builder.Services.AddAuthentication(options =>
 {
@@ -63,12 +81,13 @@ builder.Services.AddScoped<IPollRepository, PollRepository>();
 builder.Services.AddScoped<PollService>();
 builder.Services.AddScoped<IVoteRepository, VoteRepository>();
 builder.Services.AddScoped<VoteService>();
+
+builder.Services.Configure<EmployeeAPI.Core.Models.MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddScoped<EmployeeAPI.Interfaces.IEmailRepository, EmployeeAPI.Infrastructure.Repositories.EmailRepository>();
+
 var app = builder.Build();
 
-<<<<<<< HEAD
-=======
 // Configure the HTTP request pipeline
->>>>>>> b7696f2047a53762ef995f9b4104a01f2be306fe
     app.MapOpenApi();                    // Required for .NET 9+
 
     app.UseSwaggerUI(options =>
@@ -76,14 +95,26 @@ var app = builder.Build();
         options.SwaggerEndpoint("/openapi/v1.json", "Employee API V1");
         options.RoutePrefix = string.Empty;   // Makes Swagger UI appear at root[](https://localhost:xxxx/)
     });
+    if (useTestDb)
+    {
+        using var scope = app.Services.CreateScope();
 
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-app.UseHttpsRedirection();
-app.UseMiddleware<ExceptionMiddleware>();
-app.UseAuthentication();
-app.UseAuthorization();
-app.MapControllers();
+        db.Users.RemoveRange(db.Users);
+        db.Employees.RemoveRange(db.Employees);
+        db.Polls.RemoveRange(db.Polls);
+        //db.Votes.RemoveRange(db.Votes);
+        await db.SaveChangesAsync();
+    }
+    app.UseHttpsRedirection();
+    app.UseCors("CorsPolicy");
+    app.UseMiddleware<ExceptionMiddleware>();
+    app.UseAuthentication();
+    app.UseAuthorization();
+    app.MapControllers();
+    app.MapHub<LiveStreamHub>("/liveStreamHub");
 
-app.Run();
+    app.Run();
 
 public partial class Program { }

@@ -1,6 +1,7 @@
 using EmployeeAPI.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 
 namespace EmployeeAPI.Infrastructure;
 
@@ -10,7 +11,20 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
-        optionsBuilder.UseSqlite("Data Source=EmployeeTest.db");
+        // Load configuration
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+        if (string.IsNullOrEmpty(connectionString))
+        {
+            throw new InvalidOperationException("Connection string 'DefaultConnection' not found in appsettings.json");
+        }
+
+        optionsBuilder.UseSqlServer(connectionString);
 
         return new AppDbContext(optionsBuilder.Options);
     }

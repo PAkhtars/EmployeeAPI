@@ -18,6 +18,7 @@ namespace EmployeeAPI.WebApi.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<ActDetails>>> GetActDetails()
         {
             var actDetails = await _repository.GetAllAsync();
