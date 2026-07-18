@@ -1,0 +1,42 @@
+using System.Net;
+using System.Net.Http.Json;
+using Xunit;
+
+namespace MyDevOpsTestUnit;
+
+public class EmployeesApiTests
+{
+    private readonly HttpClient _client;
+
+    public EmployeesApiTests()
+    {
+        _client = new HttpClient
+        {
+            BaseAddress = new Uri("https://localhost:7001/")
+        };
+    }
+
+    [Fact]
+    public async Task GetEmployees_ReturnsSuccessStatusCode()
+    {
+        // Act
+        var response = await _client.GetAsync("api/Employees");
+
+        // Assert
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task GetEmployees_ReturnsEmployees()
+    {
+        // Act
+        var response = await _client.GetAsync("api/Employees");
+
+        // Assert
+        response.EnsureSuccessStatusCode();
+
+        var content = await response.Content.ReadAsStringAsync();
+
+        Assert.False(string.IsNullOrWhiteSpace(content));
+    }
+}
