@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
 
 namespace EmployeeAPI.Core.Entities
 {
@@ -20,7 +21,12 @@ namespace EmployeeAPI.Core.Entities
         [Column(TypeName = "text")]
         public string? ActDetails { get; set; }
 
-        
+        [StringLength(500)]
+        public string? ImagePath { get; set; }
+
+        [NotMapped]
+        public IFormFile? ActImage { get; set; }
+
         public int? LegalCategoryId { get; set; }
 
        // public LegalCategoryMaster? LegalCategoryMaster { get; set; }

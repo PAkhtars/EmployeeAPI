@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http;
+
 namespace EmployeeAPI.Core.DTOs
 {
     public class MasterActCreateDto
@@ -7,5 +9,6 @@ namespace EmployeeAPI.Core.DTOs
         public DateTime? DateOfEffect { get; set; }
         public string? ActDetails { get; set; }
         public int? LegalCategoryId { get; set; }
+        public IFormFile? ActImage { get; set; }
     }
 }
