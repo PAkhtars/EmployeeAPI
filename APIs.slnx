@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="EmployeeAPI/EmployeeAPI.csproj" />
+  <Project Path="MyDevOpsTestUnit/MyDevOpsTestUnit.csproj" />
+</Solution>
