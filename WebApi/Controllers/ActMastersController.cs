@@ -12,10 +12,12 @@ namespace EmployeeAPI.WebApi.Controllers
     public class ActMastersController : ControllerBase
     {
         private readonly IActMasterRepository _repository;
+        private readonly IWebHostEnvironment _environment;
 
-        public ActMastersController(IActMasterRepository repository)
+        public ActMastersController(IActMasterRepository repository, IWebHostEnvironment environment)
         {
             _repository = repository;
+            _environment = environment;
         }
 
         [HttpGet]
@@ -37,7 +39,8 @@ namespace EmployeeAPI.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ActMaster>> PostActMaster([FromBody] MasterActCreateDto request)
+        [Consumes("multipart/form-data")]
+        public async Task<ActionResult<ActMaster>> PostActMaster([FromForm] MasterActCreateDto request)
         {
             if (string.IsNullOrWhiteSpace(request.ActName))
             {
@@ -51,6 +54,7 @@ namespace EmployeeAPI.WebApi.Controllers
                 DateOfEffect = request.DateOfEffect,
                 ActDetails = request.ActDetails,
                 LegalCategoryId = request.LegalCategoryId,
+                ImagePath = await SaveImageAsync(request.ActImage),
                 CreatedOn = DateTime.UtcNow,
                 CreatedBy = "API"
             };
@@ -60,7 +64,8 @@ namespace EmployeeAPI.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutActMaster(int id, ActMaster actMaster)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> PutActMaster(int id, [FromForm] ActMaster actMaster)
         {
             if (id != actMaster.ActId)
                 return BadRequest("ActMaster ID mismatch.");
@@ -68,7 +73,24 @@ namespace EmployeeAPI.WebApi.Controllers
             if (!await _repository.ExistsAsync(id))
                 return NotFound();
 
-            await _repository.UpdateAsync(actMaster);
+            var existingActMaster = await _repository.GetByIdAsync(id);
+            if (existingActMaster == null)
+                return NotFound();
+
+            existingActMaster.ActName = actMaster.ActName?.Trim();
+            existingActMaster.Alias = actMaster.Alias?.Trim();
+            existingActMaster.DateOfEffect = actMaster.DateOfEffect;
+            existingActMaster.ActDetails = actMaster.ActDetails;
+            existingActMaster.LegalCategoryId = actMaster.LegalCategoryId;
+            existingActMaster.ModifiedOn = DateTime.UtcNow;
+            existingActMaster.ModifiedBy = "API";
+
+            if (actMaster.ActImage != null)
+            {
+                existingActMaster.ImagePath = await SaveImageAsync(actMaster.ActImage);
+            }
+
+            await _repository.UpdateAsync(existingActMaster);
             return NoContent();
         }
 
@@ -80,6 +102,25 @@ namespace EmployeeAPI.WebApi.Controllers
 
             await _repository.DeleteAsync(id);
             return NoContent();
+        }
+
+        private async Task<string?> SaveImageAsync(IFormFile? file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return null;
+            }
+
+            var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads", "act-masters");
+            Directory.CreateDirectory(uploadsFolder);
+
+            var fileName = $"{Guid.NewGuid():N}_{Path.GetFileName(file.FileName)}";
+            var fullPath = Path.Combine(uploadsFolder, fileName);
+
+            await using var stream = new FileStream(fullPath, FileMode.Create);
+            await file.CopyToAsync(stream);
+
+            return $"/uploads/act-masters/{fileName}";
         }
     }
 }

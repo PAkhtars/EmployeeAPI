@@ -108,6 +108,7 @@ var app = builder.Build();
         await db.SaveChangesAsync();
     }
     app.UseHttpsRedirection();
+    app.UseStaticFiles();
     app.UseCors("CorsPolicy");
     app.UseMiddleware<ExceptionMiddleware>();
     app.UseAuthentication();
