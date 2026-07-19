@@ -47,7 +47,7 @@ namespace EmployeeAPI.Infrastructure.Data
                 entity.HasOne(p => p.Creator)
                       .WithMany()
                       .HasForeignKey(p => p.CreatorId)
-                      .OnDelete(DeleteBehavior.Cascade);
+                      .OnDelete(DeleteBehavior.NoAction);
             });
 
             // === PollOption Configuration (This was missing!) ===
@@ -58,7 +58,7 @@ namespace EmployeeAPI.Infrastructure.Data
                 entity.HasOne(o => o.Poll)
                       .WithMany(p => p.Options)
                       .HasForeignKey(o => o.PollId)
-                      .OnDelete(DeleteBehavior.Cascade);
+                      .OnDelete(DeleteBehavior.NoAction);
 
                 entity.Property(o => o.DisplayOrder).IsRequired();
             });
