@@ -125,6 +125,48 @@ namespace EmployeeAPI.Migrations
                     b.ToTable("ActMasters");
                 });
 
+            modelBuilder.Entity("EmployeeAPI.Core.Entities.ActSectionDtls", b =>
+                {
+                    b.Property<int>("SectionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SectionId"));
+
+                    b.Property<int>("ActId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BareAct")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<int?>("CaseStudyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChapterName")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Exception")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Illustration")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Meaning")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Objective")
+                        .HasColumnType("text");
+
+                    b.Property<int>("SectionNo")
+                        .HasColumnType("int");
+
+                    b.HasKey("SectionId");
+
+                    b.ToTable("ActSectionDtls");
+                });
+
             modelBuilder.Entity("EmployeeAPI.Core.Entities.ComplaintMaster", b =>
                 {
                     b.Property<int>("ComplaintId")
@@ -189,6 +231,62 @@ namespace EmployeeAPI.Migrations
                     b.HasKey("ComplaintId");
 
                     b.ToTable("ComplaintMasters");
+                });
+
+            modelBuilder.Entity("EmployeeAPI.Core.Entities.LegalCaseStudy", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ArgumentsOfTheParties")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CaseTitleAndCitation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Conclusion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CourtsAnalysis")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CriticalAnalysis")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FactsOfTheCase")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImpactOfTheJudgment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Judgment_Holding")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LegalIssues")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProceduralHistory")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("References")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RelevantLaw")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LegalCaseStudies");
                 });
 
             modelBuilder.Entity("EmployeeAPI.Core.Entities.LegalCategoryMaster", b =>

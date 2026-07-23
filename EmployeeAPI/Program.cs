@@ -53,7 +53,9 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IActMasterRepository, ActMasterRepository>();
 builder.Services.AddScoped<IActDetailsRepository, ActDetailsRepository>();
+builder.Services.AddScoped<IActSectionDtlsRepository, ActSectionDtlsRepository>();
 builder.Services.AddScoped<ILegalCategoryMasterRepository, LegalCategoryMasterRepository>();
+builder.Services.AddScoped<ILegalCaseStudyRepository, LegalCaseStudyRepository>();
 builder.Services.AddScoped<IComplaintMasterRepository, ComplaintMasterRepository>();
 // Add JWT Authentication
 builder.Services.AddAuthentication(options =>
@@ -82,6 +84,7 @@ builder.Services.AddScoped<IPollRepository, PollRepository>();
 builder.Services.AddScoped<PollService>();
 builder.Services.AddScoped<IVoteRepository, VoteRepository>();
 builder.Services.AddScoped<VoteService>();
+builder.Services.AddSingleton<ITranslationService, TranslationService>();
 
 builder.Services.Configure<EmployeeAPI.Core.Models.MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<EmployeeAPI.Interfaces.IEmailRepository, EmployeeAPI.Infrastructure.Repositories.EmailRepository>();
@@ -111,6 +114,7 @@ var app = builder.Build();
     app.UseHttpsRedirection();
     app.UseStaticFiles();
     app.UseCors("CorsPolicy");
+    app.UseMiddleware<LanguageTranslationMiddleware>();
     app.UseMiddleware<ExceptionMiddleware>();
     app.UseAuthentication();
     app.UseAuthorization();
