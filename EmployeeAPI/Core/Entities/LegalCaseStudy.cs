@@ -45,6 +45,15 @@ namespace EmployeeAPI.Core.Entities
         [Column(TypeName = "nvarchar(max)")]
         public string? References { get; set; }
 
+        [StringLength(500)]
+        public string? CaseName { get; set; }
+
+        [StringLength(1000)]
+        public string? ImagePath { get; set; }
+
+        [NotMapped]
+        public IFormFile? CaseImage { get; set; }
+
         public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
 
         public DateTime? UpdatedOn { get; set; }
