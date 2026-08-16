@@ -57,6 +57,7 @@ builder.Services.AddScoped<IActSectionDtlsRepository, ActSectionDtlsRepository>(
 builder.Services.AddScoped<ILegalCategoryMasterRepository, LegalCategoryMasterRepository>();
 builder.Services.AddScoped<ILegalCaseStudyRepository, LegalCaseStudyRepository>();
 builder.Services.AddScoped<IComplaintMasterRepository, ComplaintMasterRepository>();
+builder.Services.AddScoped<IVoterRepository, VoterRepository>();
 // Add JWT Authentication
 builder.Services.AddAuthentication(options =>
 {

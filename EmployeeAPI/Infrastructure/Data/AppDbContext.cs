@@ -19,6 +19,7 @@ namespace EmployeeAPI.Infrastructure.Data
         public DbSet<LegalCategoryMaster> LegalCategoryMasters { get; set; }
         public DbSet<LegalCaseStudy> LegalCaseStudies { get; set; }
         public DbSet<ComplaintMaster> ComplaintMasters { get; set; }
+        public DbSet<Voter> Voters { get; set; }
         //public DbSet<Vote> Votes { get; set; }           // Add later
         //public DbSet<PollComment> PollComments { get; set; }
 
