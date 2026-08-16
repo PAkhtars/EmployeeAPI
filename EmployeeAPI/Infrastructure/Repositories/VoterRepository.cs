@@ -31,6 +31,18 @@ namespace EmployeeAPI.Infrastructure.Repositories
             return voter;
         }
 
+        public async Task<List<Voter>> AddRangeAsync(List<Voter> voters)
+        {
+            if (voters == null || voters.Count == 0)
+            {
+                return new List<Voter>();
+            }
+
+            await _context.Voters.AddRangeAsync(voters);
+            await _context.SaveChangesAsync();
+            return voters;
+        }
+
         public async Task UpdateAsync(Voter voter)
         {
             _context.Entry(voter).State = EntityState.Modified;

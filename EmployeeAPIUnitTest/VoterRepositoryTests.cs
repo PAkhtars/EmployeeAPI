@@ -38,7 +38,7 @@ public class VoterRepositoryTests : IDisposable
             Gender = "Male",
             PartNumber = "12A",
             AreaName = "Main Market",
-            AreaNum = "456"
+            AreaNumber = "456"
         };
 
         var created = await _repository.AddAsync(voter);
@@ -50,6 +50,38 @@ public class VoterRepositoryTests : IDisposable
         fetched.Name.Should().Be("Rahul Sharma");
         fetched.HouseNo.Should().Be("A-12");
         fetched.AreaName.Should().Be("Main Market");
+    }
+
+    [Fact]
+    public async Task AddRangeAsync_ShouldPersistMultipleVoters()
+    {
+        var voters = new List<Voter>
+        {
+            new()
+            {
+                SerialNo = 201,
+                EpicNo = "EP-2001",
+                Name = "Asha Singh",
+                HouseNo = "B-14",
+                AreaName = "City Center",
+                AreaNumber = "789"
+            },
+            new()
+            {
+                SerialNo = 202,
+                EpicNo = "EP-2002",
+                Name = "Kiran Verma",
+                HouseNo = "C-9",
+                AreaName = "Old Town",
+                AreaNumber = "790"
+            }
+        };
+
+        var created = await _repository.AddRangeAsync(voters);
+
+        created.Should().HaveCount(2);
+        (await _context.Voters.CountAsync()).Should().Be(2);
+        (await _context.Voters.Select(v => v.Name).ToListAsync()).Should().Contain(new[] { "Asha Singh", "Kiran Verma" });
     }
 
     public void Dispose()

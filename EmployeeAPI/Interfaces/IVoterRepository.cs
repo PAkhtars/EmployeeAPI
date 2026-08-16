@@ -7,6 +7,7 @@ namespace EmployeeAPI.Interfaces
         Task<IEnumerable<Voter>> GetAllAsync();
         Task<Voter?> GetByIdAsync(int id);
         Task<Voter> AddAsync(Voter voter);
+        Task<List<Voter>> AddRangeAsync(List<Voter> voters);
         Task UpdateAsync(Voter voter);
         Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);

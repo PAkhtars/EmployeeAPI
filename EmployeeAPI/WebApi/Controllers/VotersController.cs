@@ -60,6 +60,34 @@ namespace EmployeeAPI.WebApi.Controllers
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
+        [HttpPost("bulk")]
+        public async Task<ActionResult<IEnumerable<Voter>>> CreateBulk([FromBody] List<CreateVoterRequest> requests)
+        {
+            if (requests == null || requests.Count == 0)
+            {
+                return BadRequest("At least one voter is required.");
+            }
+
+            var voters = requests.Select(request => new Voter
+            {
+                SerialNo = request.SerialNo,
+                EpicNo = request.EpicNo?.Trim() ?? string.Empty,
+                Name = request.Name?.Trim() ?? string.Empty,
+                EnglishName = request.EnglishName?.Trim(),
+                RelativeName = request.RelativeName?.Trim(),
+                EnglishRelativeName = request.EnglishRelativeName?.Trim(),
+                HouseNo = request.HouseNo?.Trim(),
+                Age = request.Age,
+                Gender = request.Gender?.Trim(),
+                PartNumber = request.PartNumber?.Trim(),
+                AreaName = request.AreaName?.Trim(),
+                AreaNumber = request.AreaNumber?.Trim()
+            }).ToList();
+
+            var created = await _repository.AddRangeAsync(voters);
+            return Ok(created);
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateVoterRequest request)
         {
@@ -135,5 +163,10 @@ namespace EmployeeAPI.WebApi.Controllers
         public string? PartNumber { get; set; }
         public string? AreaName { get; set; }
         public string? AreaNumber { get; set; }
+    }
+
+    public class CreateBulkVoterRequest
+    {
+        public List<CreateVoterRequest> Voters { get; set; } = new();
     }
 }
