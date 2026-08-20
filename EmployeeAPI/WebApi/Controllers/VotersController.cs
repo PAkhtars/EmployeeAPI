@@ -1,3 +1,4 @@
+using EmployeeAPI.Core.DTOs;
 using EmployeeAPI.Core.Entities;
 using EmployeeAPI.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -22,6 +23,14 @@ namespace EmployeeAPI.WebApi.Controllers
         public async Task<ActionResult<IEnumerable<Voter>>> GetAll()
         {
             var voters = await _repository.GetAllAsync();
+            return Ok(voters);
+        }
+
+        [HttpGet("GetVoters")]
+        [AllowAnonymous]
+        public async Task<ActionResult<IEnumerable<VoterDetailsDto>>> GetVoters([FromQuery] int areaNumber, [FromQuery] int partNumber)
+        {
+            var voters = await _repository.GetVotersAsync(areaNumber, partNumber);
             return Ok(voters);
         }
 

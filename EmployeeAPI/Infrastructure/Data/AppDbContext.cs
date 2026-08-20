@@ -1,4 +1,5 @@
 ﻿using EmployeeAPI.Core.Entities;
+using EmployeeAPI.Core.DTOs;
 using EmployeeAPI.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,7 @@ namespace EmployeeAPI.Infrastructure.Data
         public DbSet<LegalCaseStudy> LegalCaseStudies { get; set; }
         public DbSet<ComplaintMaster> ComplaintMasters { get; set; }
         public DbSet<Voter> Voters { get; set; }
+        public DbSet<VoterDetailsDto> VoterDetails { get; set; }
         //public DbSet<Vote> Votes { get; set; }           // Add later
         //public DbSet<PollComment> PollComments { get; set; }
 
@@ -71,6 +73,8 @@ namespace EmployeeAPI.Infrastructure.Data
                 entity.HasKey(v => v.VoteId);
                 entity.HasIndex(v => new { v.UserId, v.PollId }).IsUnique(); // Prevent duplicate votes
             });
+
+            modelBuilder.Entity<VoterDetailsDto>().HasNoKey();
 
             // === ActMaster Configuration ===
             modelBuilder.Entity<ActMaster>(entity =>

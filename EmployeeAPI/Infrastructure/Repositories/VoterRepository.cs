@@ -1,3 +1,4 @@
+using EmployeeAPI.Core.DTOs;
 using EmployeeAPI.Core.Entities;
 using EmployeeAPI.Infrastructure.Data;
 using EmployeeAPI.Interfaces;
@@ -17,6 +18,14 @@ namespace EmployeeAPI.Infrastructure.Repositories
         public async Task<IEnumerable<Voter>> GetAllAsync()
         {
             return await _context.Voters.AsNoTracking().OrderBy(v => v.SerialNo).ToListAsync();
+        }
+
+        public async Task<IEnumerable<VoterDetailsDto>> GetVotersAsync(int areaNumber, int partNumber)
+        {
+            return await _context.VoterDetails
+                .FromSqlInterpolated($"EXEC Get_VoterDetails @AreaNumber={areaNumber}, @PartNumber={partNumber}")
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task<Voter?> GetByIdAsync(int id)

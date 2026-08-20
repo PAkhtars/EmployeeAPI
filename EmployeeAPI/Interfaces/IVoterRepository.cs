@@ -1,3 +1,4 @@
+using EmployeeAPI.Core.DTOs;
 using EmployeeAPI.Core.Entities;
 
 namespace EmployeeAPI.Interfaces
@@ -5,6 +6,7 @@ namespace EmployeeAPI.Interfaces
     public interface IVoterRepository
     {
         Task<IEnumerable<Voter>> GetAllAsync();
+        Task<IEnumerable<VoterDetailsDto>> GetVotersAsync(int areaNumber, int partNumber);
         Task<Voter?> GetByIdAsync(int id);
         Task<Voter> AddAsync(Voter voter);
         Task<List<Voter>> AddRangeAsync(List<Voter> voters);
