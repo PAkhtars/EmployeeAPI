@@ -1,4 +1,5 @@
 ﻿using EmployeeAPI.Core.Entities;
+using EmployeeAPI.Core.DTOs;
 using EmployeeAPI.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,8 +16,12 @@ namespace EmployeeAPI.Infrastructure.Data
         public DbSet<PollOption> PollOptions { get; set; }
         public DbSet<ActMaster> ActMasters { get; set; }
         public DbSet<ActDetails> ActDetails { get; set; }
+        public DbSet<ActSectionDtls> ActSectionDtls { get; set; }
         public DbSet<LegalCategoryMaster> LegalCategoryMasters { get; set; }
+        public DbSet<LegalCaseStudy> LegalCaseStudies { get; set; }
         public DbSet<ComplaintMaster> ComplaintMasters { get; set; }
+        public DbSet<Voter> Voters { get; set; }
+        public DbSet<VoterDetailsDto> VoterDetails { get; set; }
         //public DbSet<Vote> Votes { get; set; }           // Add later
         //public DbSet<PollComment> PollComments { get; set; }
 
@@ -47,7 +52,7 @@ namespace EmployeeAPI.Infrastructure.Data
                 entity.HasOne(p => p.Creator)
                       .WithMany()
                       .HasForeignKey(p => p.CreatorId)
-                      .OnDelete(DeleteBehavior.Cascade);
+                      .OnDelete(DeleteBehavior.NoAction);
             });
 
             // === PollOption Configuration (This was missing!) ===
@@ -58,7 +63,7 @@ namespace EmployeeAPI.Infrastructure.Data
                 entity.HasOne(o => o.Poll)
                       .WithMany(p => p.Options)
                       .HasForeignKey(o => o.PollId)
-                      .OnDelete(DeleteBehavior.Cascade);
+                      .OnDelete(DeleteBehavior.NoAction);
 
                 entity.Property(o => o.DisplayOrder).IsRequired();
             });
@@ -68,6 +73,8 @@ namespace EmployeeAPI.Infrastructure.Data
                 entity.HasKey(v => v.VoteId);
                 entity.HasIndex(v => new { v.UserId, v.PollId }).IsUnique(); // Prevent duplicate votes
             });
+
+            modelBuilder.Entity<VoterDetailsDto>().HasNoKey();
 
             // === ActMaster Configuration ===
             modelBuilder.Entity<ActMaster>(entity =>

@@ -1,0 +1,651 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\APIs\\EmployeeAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\entities\\actmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\entities\\actmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\webapi\\controllers\\pollscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:webapi\\controllers\\pollscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\employeeapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:employeeapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\APIs\\EmployeeAPIUnitTest\\Integration\\UsersApiIntegrationTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\employeeapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:employeeapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\webapi\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:webapi\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\webapi\\controllers\\votescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:webapi\\controllers\\votescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\infrastructure\\repositories\\voterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:infrastructure\\repositories\\voterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\entities\\vote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\entities\\vote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\entities\\polloption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\entities\\polloption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\application\\services\\voteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:application\\services\\voteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\interfaces\\ivoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:interfaces\\ivoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PublishEmployeeApi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\employeeapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:employeeapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\infrastructure\\repositories\\pollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:infrastructure\\repositories\\pollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\interfaces\\ipollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:interfaces\\ipollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\application\\services\\pollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:application\\services\\pollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\entities\\poll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\entities\\poll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\dtos\\polldtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\dtos\\polldtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\core\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:core\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|d:\\apis\\employeeapi\\appsettings1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC833B02-7B83-2217-828E-6302F6608E18}|EmployeeAPI.csproj|solutionrelative:appsettings1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\APIs\\EmployeeAPIUnitTest\\Integration\\UsersApiFullTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\APIs\\EmployeeAPIUnitTest\\Integration\\CustomWebApplicationFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\APIs\\EmployeeAPIUnitTest\\WenApi\\Controllers\\EmployeeControllerTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\APIs\\EmployeeAPI\\Migrations\\20260609125930_InitialCreate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260609125930_InitialCreate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\APIs\\EmployeeAPI\\Migrations\\20260609104148_AddVoteTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260609104148_AddVoteTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ActMaster.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\ActMaster.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\ActMaster.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\ActMaster.cs",
+              "RelativeToolTip": "Core\\Entities\\ActMaster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T10:21:52.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UsersApiFullTests.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPIUnitTest\\Integration\\UsersApiFullTests.cs",
+              "RelativeDocumentMoniker": "..\\EmployeeAPIUnitTest\\Integration\\UsersApiFullTests.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPIUnitTest\\Integration\\UsersApiFullTests.cs",
+              "RelativeToolTip": "..\\EmployeeAPIUnitTest\\Integration\\UsersApiFullTests.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA3wBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T10:01:52.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployeeAPI.http",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\EmployeeAPI.http",
+              "RelativeDocumentMoniker": "EmployeeAPI.http",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\EmployeeAPI.http",
+              "RelativeToolTip": "EmployeeAPI.http",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-27T04:00:41.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DesignTimeDbContextFactory.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\DesignTimeDbContextFactory.cs",
+              "RelativeDocumentMoniker": "DesignTimeDbContextFactory.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\DesignTimeDbContextFactory.cs",
+              "RelativeToolTip": "DesignTimeDbContextFactory.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwAwAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T08:03:10.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:08:37.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeAPI.csproj",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\EmployeeAPI.csproj",
+              "RelativeDocumentMoniker": "EmployeeAPI.csproj",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\EmployeeAPI.csproj",
+              "RelativeToolTip": "EmployeeAPI.csproj",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-27T04:17:26.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PollsController.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\WebApi\\Controllers\\PollsController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\PollsController.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\WebApi\\Controllers\\PollsController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\PollsController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwCsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:49:12.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersApiIntegrationTests.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPIUnitTest\\Integration\\UsersApiIntegrationTests.cs",
+              "RelativeDocumentMoniker": "..\\EmployeeAPIUnitTest\\Integration\\UsersApiIntegrationTests.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPIUnitTest\\Integration\\UsersApiIntegrationTests.cs",
+              "RelativeToolTip": "..\\EmployeeAPIUnitTest\\Integration\\UsersApiIntegrationTests.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T08:51:48.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CustomWebApplicationFactory.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPIUnitTest\\Integration\\CustomWebApplicationFactory.cs",
+              "RelativeDocumentMoniker": "..\\EmployeeAPIUnitTest\\Integration\\CustomWebApplicationFactory.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPIUnitTest\\Integration\\CustomWebApplicationFactory.cs",
+              "RelativeToolTip": "..\\EmployeeAPIUnitTest\\Integration\\CustomWebApplicationFactory.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwBkAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:27:35.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EmployeeControllerTest.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPIUnitTest\\WenApi\\Controllers\\EmployeeControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\EmployeeAPIUnitTest\\WenApi\\Controllers\\EmployeeControllerTest.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPIUnitTest\\WenApi\\Controllers\\EmployeeControllerTest.cs",
+              "RelativeToolTip": "..\\EmployeeAPIUnitTest\\WenApi\\Controllers\\EmployeeControllerTest.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAewCEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:27:35.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "web.config",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\web.config",
+              "RelativeDocumentMoniker": "web.config",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\web.config",
+              "RelativeToolTip": "web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-06-06T10:31:11.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEmployeeRepository.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Interfaces\\IEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IEmployeeRepository.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Interfaces\\IEmployeeRepository.cs",
+              "RelativeToolTip": "Interfaces\\IEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:36:16.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\WebApi\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\EmployeesController.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\WebApi\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:19:35.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20260609125930_InitialCreate1.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Migrations\\20260609125930_InitialCreate1.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260609125930_InitialCreate1.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Migrations\\20260609125930_InitialCreate1.cs",
+              "RelativeToolTip": "Migrations\\20260609125930_InitialCreate1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T12:59:31.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20260609104148_AddVoteTable.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Migrations\\20260609104148_AddVoteTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260609104148_AddVoteTable.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Migrations\\20260609104148_AddVoteTable.cs",
+              "RelativeToolTip": "Migrations\\20260609104148_AddVoteTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAACBjwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T11:02:24.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\User.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\User.cs",
+              "RelativeToolTip": "Core\\Entities\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:23:02.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VotesController.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\WebApi\\Controllers\\VotesController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\VotesController.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\WebApi\\Controllers\\VotesController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\VotesController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:35:52.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-21T08:29:10.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Vote.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\Vote.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\Vote.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\Vote.cs",
+              "RelativeToolTip": "Core\\Entities\\Vote.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:31:26.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VoteRepository.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Infrastructure\\Repositories\\VoteRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\VoteRepository.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Infrastructure\\Repositories\\VoteRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\VoteRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:33:29.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "VoteService.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Application\\Services\\VoteService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\VoteService.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Application\\Services\\VoteService.cs",
+              "RelativeToolTip": "Application\\Services\\VoteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:34:48.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T11:01:59.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PollOption.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\PollOption.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\PollOption.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\PollOption.cs",
+              "RelativeToolTip": "Core\\Entities\\PollOption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:45:25.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IVoteRepository.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Interfaces\\IVoteRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IVoteRepository.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Interfaces\\IVoteRepository.cs",
+              "RelativeToolTip": "Interfaces\\IVoteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T10:32:18.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\PublishEmployeeApi\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\..\\PublishEmployeeApi\\appsettings.json",
+              "ToolTip": "D:\\PublishEmployeeApi\\appsettings.json",
+              "RelativeToolTip": "..\\..\\PublishEmployeeApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAGAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-07T12:33:34.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IPollRepository.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Interfaces\\IPollRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IPollRepository.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Interfaces\\IPollRepository.cs",
+              "RelativeToolTip": "Interfaces\\IPollRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:43:46.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Poll.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\Poll.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\Poll.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\Entities\\Poll.cs",
+              "RelativeToolTip": "Core\\Entities\\Poll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:44:44.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PollRepository.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Infrastructure\\Repositories\\PollRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PollRepository.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Infrastructure\\Repositories\\PollRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PollRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:46:30.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PollService.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Application\\Services\\PollService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PollService.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Application\\Services\\PollService.cs",
+              "RelativeToolTip": "Application\\Services\\PollService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAWwEEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:32.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EmployeeAPI",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\EmployeeAPI.csproj",
+              "RelativeDocumentMoniker": "EmployeeAPI.csproj",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\EmployeeAPI.csproj",
+              "RelativeToolTip": "EmployeeAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-06T10:55:12.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PollDtos.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\PollDtos.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\PollDtos.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\PollDtos.cs",
+              "RelativeToolTip": "Core\\DTOs\\PollDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:52:59.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwBUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:27:50.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Interfaces\\IJwtService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IJwtService.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Interfaces\\IJwtService.cs",
+              "RelativeToolTip": "Interfaces\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:49:06.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\UserDto.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "Core\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:24:49.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Application\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\JwtService.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Application\\Services\\JwtService.cs",
+              "RelativeToolTip": "Application\\Services\\JwtService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAmwFIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:49:47.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Core\\Models\\Employee.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\Models\\Employee.cs",
+              "RelativeToolTip": "Core\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:07:08.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\UserLoginDto.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\UserLoginDto.cs",
+              "RelativeToolTip": "Core\\DTOs\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:26:57.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserRegisterDto.cs",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\UserRegisterDto.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\UserRegisterDto.cs",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\Core\\DTOs\\UserRegisterDto.cs",
+              "RelativeToolTip": "Core\\DTOs\\UserRegisterDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAGBiwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:26:07.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "appsettings1.json",
+              "DocumentMoniker": "D:\\APIs\\EmployeeAPI\\appsettings1.json",
+              "RelativeDocumentMoniker": "appsettings1.json",
+              "ToolTip": "D:\\APIs\\EmployeeAPI\\appsettings1.json",
+              "RelativeToolTip": "appsettings1.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-21T07:04:23.971Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

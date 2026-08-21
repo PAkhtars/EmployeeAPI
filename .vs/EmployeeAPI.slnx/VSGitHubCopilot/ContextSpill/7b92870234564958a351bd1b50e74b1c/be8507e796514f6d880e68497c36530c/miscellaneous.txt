@@ -1,0 +1,115 @@
+﻿Test run completed. Ran 12 test(s). 12 Passed, 0 Failed 
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.DeleteEmployee_ReturnsNoContent_OnSuccess Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.PostEmployee_CreatesAndReturnsCreated Passed
+EmployeeAPIUnitTest.Integration.UsersApiFullTests.Full_User_Api_Workflow Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.PutEmployee_ReturnsNoContent_OnSuccess Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.DeleteEmployee_ReturnsNotFound_WhenNotExists Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.GetEmployees_ReturnsOkWithEmployees Passed
+EmployeeAPIUnitTest.UnitTest1.Test1 Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.PutEmployee_ReturnsBadRequest_OnIdMismatch Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.GetEmployee_ReturnsNotFound_WhenMissing Passed
+EmployeeAPIUnitTest.Integration.UsersApiIntegrationTests.Register_Login_GetProfile_Workflow Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.GetEmployee_ReturnsOk_WhenExists Passed
+EmployeeAPIUnitTest.WenApi.Controllers.EmployeeControllerTest.PutEmployee_ReturnsNotFound_WhenNotExists Passed
+
+Test Output:
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE "u"."UserId" = @p
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@searchTerm='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT COUNT(*)
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE instr("u"."Username", @searchTerm) > 0 OR instr("u"."Email", @searchTerm) > 0 OR instr("u"."FullName", @searchTerm) > 0
+[Informational] warn: Microsoft.EntityFrameworkCore.Query[10102]
+[Informational]       The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[Informational] warn: Microsoft.EntityFrameworkCore.Query[10102]
+[Informational]       The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@searchTerm='?' (Size = 8), @p4='?' (DbType = Int32), @p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE instr("u"."Username", @searchTerm) > 0 OR instr("u"."Email", @searchTerm) > 0 OR instr("u"."FullName", @searchTerm) > 0
+[Informational]       LIMIT @p4 OFFSET @p
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       ORDER BY "u"."LastActiveAt" DESC
+[Informational]       LIMIT @p
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       ORDER BY "u"."LastActiveAt"
+[Informational]       LIMIT @p
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@ToLower='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE lower("u"."Email") = @ToLower
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p12='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 20), @p4='?' (DbType = DateTime), @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime), @p8='?' (Size = 60), @p9='?', @p10='?', @p11='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+[Informational]       UPDATE "Users" SET "Bio" = @p0, "CreatedAt" = @p1, "DateOfBirth" = @p2, "Email" = @p3, "ExpiresAt" = @p4, "FullName" = @p5, "IsVerified" = @p6, "LastActiveAt" = @p7, "PasswordHash" = @p8, "ProfileImageUrl" = @p9, "Token" = @p10, "Username" = @p11
+[Informational]       WHERE "UserId" = @p12
+[Informational]       RETURNING 1;
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@ToLower='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE lower("u"."Email") = @ToLower
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE "u"."UserId" = @p
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE "u"."UserId" = @p
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE "u"."UserId" = @p
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       DELETE FROM "Users"
+[Informational]       WHERE "UserId" = @p0
+[Informational]       RETURNING 1;
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE "u"."UserId" = @p
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p12='?' (DbType = Guid), @p0='?' (Size = 16), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 20), @p4='?' (DbType = DateTime), @p5='?' (Size = 12), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime), @p8='?' (Size = 60), @p9='?', @p10='?', @p11='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+[Informational]       UPDATE "Users" SET "Bio" = @p0, "CreatedAt" = @p1, "DateOfBirth" = @p2, "Email" = @p3, "ExpiresAt" = @p4, "FullName" = @p5, "IsVerified" = @p6, "LastActiveAt" = @p7, "PasswordHash" = @p8, "ProfileImageUrl" = @p9, "Token" = @p10, "Username" = @p11
+[Informational]       WHERE "UserId" = @p12
+[Informational]       RETURNING 1;
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       SELECT "u"."UserId", "u"."Bio", "u"."CreatedAt", "u"."DateOfBirth", "u"."Email", "u"."ExpiresAt", "u"."FullName", "u"."IsVerified", "u"."LastActiveAt", "u"."PasswordHash", "u"."ProfileImageUrl", "u"."Token", "u"."Username"
+[Informational]       FROM "Users" AS "u"
+[Informational]       WHERE "u"."UserId" = @p
+[Informational]       LIMIT 1
+[Informational] info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+[Informational]       Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[Informational]       DELETE FROM "Users"
+[Informational]       WHERE "UserId" = @p0
+[Informational]       RETURNING 1;
+[Informational] info: Microsoft.Hosting.Lifetime[0]
+[Informational]       Application is shutting down...
+[Informational] info: Microsoft.Hosting.Lifetime[0]
+[Informational]       Application is shutting down...
+[Informational] [xUnit.net 00:00:25.11]   Finished:    EmployeeAPIUnitTest
+[Informational] ========== Test run finished: 12 Tests (12 Passed, 0 Failed, 0 Skipped) run in 25.1 sec ==========
